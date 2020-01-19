@@ -1,0 +1,202 @@
+.container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns:repeat(3,1fr) ;
+    /* grid-template-rows: 100px 500px 500px 100px; */
+    grid-template-areas: 
+    "nv nv nv"
+    "hd hd hd"
+    "gm gm gm"
+    "ft ft ft";
+}
+body{
+    margin: 0;
+    /* transition: all .5s; */
+
+}
+/* ************************************** nav ************************************* */
+nav{
+    grid-area: nv;
+    display: flex;
+    flex-direction: row;
+    background-color: #081624;
+    padding:30px 100px 10px;
+    text-transform: capitalize;
+    justify-content: space-between;  
+    
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    
+}
+nav ul li a{
+    padding-right: 20px;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: all .3s;
+}
+nav ul li a:hover{
+    color: violet ;
+    font-size: 20px;
+    font-weight: 900;
+}
+/* ************************************** ./nav ************************************* */
+/* ************************************** header ************************************* */
+header{
+    grid-area: hd;
+    background-image: url(../img/slider-bg-1.jpg);
+    text-align: center;
+    text-align: center;
+    padding: 60px;
+}
+header h1{
+    color: white;
+    font-size: 130px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    transition: all .5s;
+
+}
+header p{
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 25px;
+    font-weight: 900;
+    width: 60%;
+    margin: auto;
+}
+ button{
+    border: 0;
+    padding: 20px 40px;
+    margin: 40px 0 40px;
+    font-size: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 9px 5px #646161;
+    transition: all .5s;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color:#ffffff47;
+    color: white;
+
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+@media (max-width:900px){
+    header p{
+        width: 100%;
+    }
+    header h1{
+        font-size: 90px;
+    }
+}
+
+@media (max-width:900px){
+    header p{
+        width: 100%;
+    }
+    header h1{
+        font-size: 90px;
+    }
+}
+@media (max-width:600px){
+    header h1{
+        font-size: 70px;
+    }
+    .logo{
+        display: none;
+    }
+    nav{
+        justify-content: space-around;  
+    }
+    
+}
+@media (max-width:450px){
+    header h1{
+        font-size: 50px;
+    }
+}
+/* ************************************** ./header ************************************* */
+
+.games{
+    background-color: #501755 ;
+    grid-area: gm;
+    /* margin: 30px 0; */
+    text-align: center;
+}
+.gameitems{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+@media (max-width:900px) and (min-width:0px){
+    .gameitems{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.iteminfo{
+    box-shadow: 0px 0px 9px 5px gray;
+    margin: 50px 20px;
+    padding: 20px;
+    background-color:#ffffff47;
+    color: white;
+}
+.iteminfo h2{
+    text-transform: capitalize;
+    font-size: 30px;
+}
+.iteminfo p{
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 23px;
+    font-weight: 900;
+    /* text-align: justify; */
+    /* width: 60%; */
+    /* margin: auto;    */
+}
+.iteminfo img{
+    width: 100%;
+}
+.more-games{
+    border-radius: 50px;
+    width: 50%;
+}
+/* ***************************************footer************************************* */
+footer{
+    grid-area: ft;
+    background-color: #421047 ;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    
+
+}
+footer .fa{
+    margin:10px;
+    font-size: 28px;
+    transition: all .5s;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 1.7;
+}
+footer .fa:hover{
+    /* padding: 0 10px; */
+    /* font-size: 28px; */
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 9px 5px gray;
+    
+}
+
+/* *************************************** ./footer************************************* */
